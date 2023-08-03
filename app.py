@@ -2,11 +2,12 @@ from flask import Flask, render_template, request, redirect, url_for
 from pymongo import MongoClient
 import certifi
 from bson.objectid import ObjectId
+import fontawesome
 
 client = MongoClient("mongodb+srv://basitabass27411:iamahacker313@baiq.o4c0pn6.mongodb.net/?retryWrites=true&w=majority", tlsCAFile = certifi.where())
 
 db = client['Bank']
-coll = db['bankAccount']  
+coll = db['bankAccount']   
 
 # coll.insert_one({'name': 'Basit Abass', 'account_number': 315, 'balance':0})
 
