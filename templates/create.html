@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {%block title %} Deposit {% endblock %} {% block content %}
+<form action = "/create-account" method = 'post'> 
+     <div class="mb-3">
+       <label for="exampleInputEmail1" class="form-label">Your name</label>
+       <input type="text" class="form-control" id="exampleInputEmail1" name = "name" aria-describedby="emailHelp">
+     </div>
+     <div class="mb-3">
+          
+       <label for="exampleInputPassword1" class="form-label">your Account number</label>
+       <input type="text" class="form-control" name = "accNumber" id="exampleInputPassword1"> 
+     </div>
+     <div class="mb-3">
+       <label for="exampleInputPassword1" class="form-label">Amount</label>
+       <input type="number" class="form-control" name = "amount" id="exampleInputPassword1"> 
+     </div>
+     <!-- {% for account in accounts %}
+     <div class="mb-3">
+       <label for="exampleInputPassword1" class="form-label">Your balance</label>
+       
+       <input type="number" class="form-control" name = "accNumber" value = {{account['balance']}} id="exampleInputPassword1">
+       {%endfor%}
+     </div> -->
+     <div class="mb-3 form-check">
+       <input type="checkbox" class="form-check-input" id="exampleCheck1">
+     </div>
+     <button type="submit" class="btn btn-primary">Submit</button>
+   </form>
+{%endblock%}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block title %} Deposit {% endblock%}  {% block content %}
+<form action = "/withdraw" method = "post">
+     <input type="hidden" name = "name" value = "{{account.name}}"/>
+     <input type="hidden" name = "balance" value = "{{account.balance}}"/>
+     <div class="mb-3">
+       <label for="exampleInputEmail1" class="form-label">Amount</label>
+       <input type="number" class="form-control" id="exampleInputEmail1" name = "amount" aria-describedby="emailHelp">
+     </div> 
+     
+     <button type="submit" class="btn btn-danger">Withdraw Money</button> 
+   </form>
+   {%endblock%}
